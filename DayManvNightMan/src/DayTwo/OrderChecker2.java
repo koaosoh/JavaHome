@@ -7,7 +7,7 @@ package DayTwo;
 
 import java.util.Scanner;		
 
-public class OrderChecker {
+public class OrderChecker2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -20,8 +20,6 @@ public class OrderChecker {
 		
 		do
 		{
-			
-
 			System.out.println("Number of Bolts: ");
 			b = input.nextInt();
 			
@@ -31,33 +29,34 @@ public class OrderChecker {
 			System.out.println("Number of Washers: ");
 			w = input.nextInt();
 			
+			if( !(b<=n) && !(w>=(2*b) ) ) {
+				System.out.println("Would you like to change your order?");
+				choice = input.nextLine();   
+			}
+			
 			if(b>n)
-			{System.out.println("Check the order:too few nuts. ");
-			}
+				System.out.println("Check the order:too few nuts. ");
+
 			if(w<(2*b))
-			{System.out.println("Check the order:too few washers. ");
-			}
+				System.out.println("Check the order:too few washers. ");
+
 			if(b<=n && w>=(2*b)){
 				System.out.println("Order is OK.");
 				System.out.println("\nTotal cost: " + (b*5)*(n*3)*(w*1));
 			}
-			else {
-				
-				System.out.println("Would you like to change your order?");
-				choice = input.nextLine();   
-			}
-			}
-			
-	
-			}
-		while( choice.equalsIgnoreCase("yes") || choice.equalsIgnoreCase("ok") ); 
-			
-		}
-		
-		
-		
-		
-		
-		
-	}
 
+//			else if ( !(b<=n) && !(w>=(2*b) ) ) {
+				
+
+//			}
+			
+		}while( choice.equalsIgnoreCase("yes") || choice.equalsIgnoreCase("ok") ); 
+			
+	}
+		
+		
+		
+		
+		
+		
+}
