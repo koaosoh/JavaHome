@@ -10,22 +10,36 @@ public class OrderChecker {
 		int b;
 		int n;
 		int w;
-		int user;
 		
-		Scanner inputuser = new Scanner(System.in);
-		System.out.println("Number of Bolts: ");
-		user = inputuser.nextInt();
+		Scanner inputb = new Scanner(System.in);
+			System.out.println("Number of Bolts: ");
+			b = inputb.nextInt();
+			
+			Scanner inputn = new Scanner(System.in);
+			System.out.println("Number of Nuts: ");
+			n = inputn.nextInt();
+			
+			Scanner inputw = new Scanner(System.in);
+			System.out.println("Number of Washers: ");
+			w = inputw.nextInt();
+			
+			if(b>n)
+			{System.out.println("Check the order:too few nuts. ");
+			}
+			if(w<(2*b))
+			{System.out.println("Check the order:too few washers. ");
+			}
+			if(b<=n && w>=(2*b))
+			{System.out.println("Order is OK.");
+				System.out.println("\nTotal cost: " + (b*5)*(n*3)*(w*1));}
+			}
+			
+			
 		
-		System.out.println("Number of Nuts: ");
-		user = inputuser.nextInt();
 		
-		System.out.println("Number of Washers: ");
-		user = inputuser.nextInt();
 		
-		b=5;
-		n=3;
-		w=1;
+		
+		
 		
 	}
 
-}
